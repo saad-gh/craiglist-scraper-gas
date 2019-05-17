@@ -355,7 +355,7 @@ function fetchPosts() {
                 logMessage(e, logSheet);
               }
             }
-            if (postsTwentyFourHours) {
+            if (postsTwentyFourHours && postDateCurrent) {
               postDateCurrentObj = new Date(postDateCurrent.replace(/\s/, "T"));
               if (postDateCurrentObj.getTime() < yesterday.getTime()) {
                 break;
